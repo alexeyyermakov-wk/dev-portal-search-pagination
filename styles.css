@@ -1,0 +1,236 @@
+body {
+    background-color: #fcfcfc;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0 0 0 70px;
+}
+
+html {
+    display: block;
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.breadcrumb-bar {
+    background: #f2f2f2;
+    border-bottom: 1px solid #dddddd;
+    color: #444444;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 30px;
+}
+
+.page-content {
+    padding: 30px;
+}
+
+.temp-nav-container {
+    background: #282828;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 70px;
+}
+
+.results-status {
+    color: #999999;
+    margin-bottom: 12px;
+    padding-top: 12px;
+}
+
+.result-container {
+    padding: 12px;
+}
+
+.result-title {
+    font-size: 18px;
+}
+
+.result-url {
+    color: #339900;
+    font-size: 12px;
+    font-style: italic;
+    text-decoration: none !important;
+}
+
+.result-type {
+    color: #999999;
+}
+
+.search-container {
+    background: #fff;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    display: flex;
+    height: 44px;
+    margin-bottom: 30px;
+    width: 632px;
+    z-index: 3;
+}
+
+.search-container:hover {
+    box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+}
+
+.search-wrapper {
+    flex: 1;
+    display: flex;
+    padding: 5px 4px 0 16px;
+}
+
+.search-input-wrapper {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    flex: 100%;
+    -webkit-tap-highlight-color: transparent;
+
+    line-height: 34px;
+    height: 34px;
+
+    font-size: 18px;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    color: #999999;
+    padding: 12px;
+    width: 44px;
+}
+
+.search-btn:hover {
+    color: #777777;
+}
+
+.search-btn:active, .search-btn:focus {
+    outline: none;
+    color: #0366d6;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: 280px calc(100% - 280px);
+}
+
+.result-preview-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.result-preview-item {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 60px; /* This should only show 3 lines in firefox */
+}
+
+.results-filter-box {
+    padding: 10px;
+}
+
+.profile-link {
+    color: #5a5a5a
+}
+
+.profile-link:hover {
+    color: #6c0
+}
+
+.title-icon {
+    margin: 4px auto auto auto;
+}
+
+.title-container {
+    margin-top: 2px;
+}
+
+/* CSS For pagination at the bottom of the results :) */
+.pag-bar {
+    /*margin-left: 15%;*/
+    grid-column-start: 2;
+    padding-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.pag-button {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+    border: 0.5px solid #ffffff;
+    transition-duration: 0.2s;
+    text-decoration: none;
+    padding: 8px 12px;
+    color: black;
+}
+
+#inactive-pag-button {
+    pointer-events: none;
+    color: #999999;
+}
+
+#active-pag-button {
+    color: #0366d6;
+}
+
+#current-pag-button {
+    color: #ffffff;
+    background-color: #0366d6;
+}
+
+.pag-button:hover {
+    border: 0.5px solid #d0d0d0;
+}
+
+#arrow-back {
+    position: relative;
+    top: 3px;
+    font-size: 15px;
+}
+
+#arrow-forward {
+    position: relative;
+    top: 3px;
+    font-size: 15px;
+}

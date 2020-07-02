@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Portal Search</title>
+    <script src="filters.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <app-nav class="temp-nav-container"></app-nav>
+    <div class="breadcrumb-bar">
+        <a class="search-link" style="color: #5A5A5A; font-weight: bold;" href="/landing">Dev Portal</a><svg aria-hidden="true" data-prefix="fal" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" style="color: #5A5A5A80; height: 14px; margin: 0 16px; vertical-align: middle;"><path fill="currentColor" d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"></path></svg><a class="search-link" href="/apps/search/" style="color: #5A5A5A;">Search</a><svg aria-hidden="true" data-prefix="fal" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512" style="color: #5A5A5A80; height: 14px; margin: 0 16px; vertical-align: middle;"><path fill="currentColor" d="M166.9 264.5l-117.8 116c-4.7 4.7-12.3 4.7-17 0l-7.1-7.1c-4.7-4.7-4.7-12.3 0-17L127.3 256 25.1 155.6c-4.7-4.7-4.7-12.3 0-17l7.1-7.1c4.7-4.7 12.3-4.7 17 0l117.8 116c4.6 4.7 4.6 12.3-.1 17z"></path></svg><span style="color: #5A5A5A80;">Results</span>
+        <a href="/profile" class="profile-link" style="float: right;"><svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-circle" role="img" width="24" height="24" viewBox="0 0 512 512"><path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg></a>
+    </div>
+    <div class="page-content">
+        <form id="search-form" action="" method="get" autocomplete="off">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <div class="search-input-wrapper">
+                        <input class="search-input" id="query" type="text" name="q" placeholder="Search" value="Show me the money">
+                    </div>
+                </div>
+                <button class="search-btn" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                </button>
+            </div>
+        </form>
+
+
+            <div class="results-status">
+                <span id="count">6</span> results (1.1 seconds)</div>
+            <div class="results-grid">
+                <div>
+                    <strong>Source:</strong>
+                    <div class="results-filter-box">
+                        <form action="" id="providers">
+                                <input type="checkbox" onchange="toggleFilter('cf')" name="cf" data-provider="cf" form="search-form" checked> Confluence (3)<br>
+                                <input type="checkbox" onchange="toggleFilter('gh')" name="gh" data-provider="gh" form="search-form" checked> Github (3)<br>
+                        </form>
+                    </div>
+                </div>
+                <div id="results">
+                        <div class="result-container" data-provider="cf">
+                            <div>
+                                <div class="title-container">
+                                    <a class="result-title" href="https://workiva.com">Something something Workiva:)</a>
+                                </div>
+                                <div class=""><a class="result-url" href="https://workiva.com">workiva.net</a></div>
+                                <ul class="result-preview-list"></ul>
+                                <li class="result-preview-item">Preview...</li>
+                                <div class="result-type">
+                                    Document 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-container" data-provider="cf">
+                            <div>
+                                <div class="title-container">
+                                    <a class="result-title" href="https://workiva.com">Something something Workiva:)</a>
+                                </div>
+                                <div class=""><a class="result-url" href="https://workiva.com">workiva.net</a></div>
+                                <ul class="result-preview-list"></ul>
+                                <li class="result-preview-item">Preview...</li>
+                                <div class="result-type">
+                                    Question
+                                </div>
+                            </div>
+                        </div>
+                        <div class="result-container" data-provider="cf">
+                            <div>
+                                <div class="title-container">
+                                    <a class="result-title" href="https://workiva.com">Something something Workiva:)</a>
+                                </div>
+                                <div class=""><a class="result-url" href="https://workiva.com">workiva.net</a></div>
+                                <ul class="result-preview-list"></ul>
+                                <li class="result-preview-item">Preview...</li>
+                                <div class="result-type">
+                                    Attachment
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+
+                <div class="pag-bar">
+                    <a class="pag-button" id="inactive-pag-button"><ion-icon name="arrow-back" id="arrow-back"></ion-icon> Previous</a>
+                    <a class="pag-button" id="current-pag-button">1</a>
+                    <a class="pag-button">2</a>
+                    <a class="pag-button">3</a>
+                    <a class="pag-button">4</a>
+                    <a class="pag-button">5</a>
+                    <a class="pag-button" id="inactive-pag-button">...</a>
+                    <a class="pag-button">99</a>
+                    <a class="pag-button">100</a>
+                    <a class="pag-button" id="active-pag-button">Next <ion-icon name="arrow-forward" id="arrow-forward"></ion-icon></a>
+                </div>
+
+
+
+            </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.wdesk.com/prod-eng-nav/3.5.0/runtime.js"></script>
+    <script type="text/javascript" src="https://cdn.wdesk.com/prod-eng-nav/3.5.0/polyfills.js"></script>
+    <script type="text/javascript" src="https://cdn.wdesk.com/prod-eng-nav/3.5.0/main.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+</html>
